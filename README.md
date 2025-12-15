@@ -1,6 +1,6 @@
 # MFF – Mini Four Feeder
 
-![MFF – Mini Four Feeder render](media/renders/mff_v1.png)
+![MFF – Mini Four Feeder render](media/renders/mff_v1.0.png)
 
 **MFF (Mini Four Feeder)**  
 Compact Multi Material System for Klipper
