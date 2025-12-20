@@ -2,17 +2,17 @@
 
 ![MFF – Mini Four Feeder render](media/renders/mff_v1.0.png)
 
+**MFF (Mini Four Feeder)**  
+Compact Multi Material System for Klipper
+
+---
+
 ## First Official Footage
 
 [![MFF – Mini Four Feeder | First Official Footage](https://img.youtube.com/vi/048uBuayx-M/maxresdefault.jpg)](https://www.youtube.com/watch?v=048uBuayx-M)
 
 _First official footage of the **MFF (Mini Four Feeder)** project.  
 Work in progress – announcement only._
-
-**MFF (Mini Four Feeder)**  
-Compact Multi Material System for Klipper
-
----
 
 **Announcement Repository – Work in Progress**
 
