@@ -98,7 +98,11 @@ to this repository when available.
 © Scops Owl Designs  
 Project information page — no files released.
 
-[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Support%20this%20project&emoji=🛠️&slug=scopsowldesigns)](https://buymeacoffee.com/scopsowldesigns)
+**Support development**  
+Most of my work is open-source.  
+If it helped you, consider buying me a coffee.
+
+https://buymeacoffee.com/scopsowldesigns
 
 ## 🔹 Voron Attribution & Disclaimer
 
