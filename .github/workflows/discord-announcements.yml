@@ -1,0 +1,43 @@
+name: Discord Announcements
+
+on:
+  release:
+    types: [published]
+
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send announcement to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "release" ]; then
+            TITLE="🚀 New MFF Release"
+            CONTENT="**${{ github.event.release.name }}** has been published.\n\n${{ github.event.release.html_url }}"
+          else
+            if [ "${{ github.event.pull_request.merged }}" = "true" ]; then
+              TITLE="🔀 Pull Request Merged"
+              CONTENT="**${{ github.event.pull_request.title }}**\nMerged by @${{ github.actor }}\n\n${{ github.event.pull_request.html_url }}"
+            else
+              exit 0
+            fi
+          fi
+
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{
+                 \"username\": \"MFF GitHub\",
+                 \"embeds\": [{
+                   \"title\": \"$TITLE\",
+                   \"description\": \"$CONTENT\",
+                   \"color\": 3447003
+                 }]
+               }" \
+               "$DISCORD_WEBHOOK_URL"
